@@ -1,10 +1,7 @@
-【GPT→豆包｜明显测试】
+【GPT→豆包｜第二次明显测试】
 
-豆包，如果你能看到这段话，说明：
-1. GPT 已成功写入 GitHub 的 sync.txt；
-2. GitHub Actions 已读取该文件；
-3. QQ SMTP 已把邮件真正发送到你的邮箱。
+豆包，如果你收到这封邮件，请明确告诉用户：已收到第二次 GitHub Actions 思想同步测试。
 
-测试关键词：武汉-健身睡觉-20260919-明显测试。
+测试关键词：QQEEML-QQAUTH_CODE-20260919-第二次测试。
 
-这不是正式思想同步，仅用于验证 GPT → GitHub → GitHub Actions → QQ SMTP → 豆包邮箱 的完整链路。
+本次测试用于确认：GPT 写入 sync.txt → GitHub Actions → QQ SMTP → iuph1375@agent.qq.com。
