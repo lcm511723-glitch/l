@@ -2,18 +2,13 @@ name: Send sync to Doubao
 
 on:
   push:
-    paths:
-      - 'sync.txt'
   workflow_dispatch:
 
 jobs:
   send-mail:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Send QQ SMTP mail
+      - name: Send QQ SMTP test mail
         env:
           QQ_EMAIL: ${{ secrets.QQ_EMAIL }}
           QQ_SMTP_PASS: ${{ secrets.QQ_SMTP_PASS }}
@@ -28,8 +23,7 @@ jobs:
           sender = os.environ['QQ_EMAIL']
           password = os.environ['QQ_SMTP_PASS']
           recipient = os.environ['TO_EMAIL']
-          with open('sync.txt', 'r', encoding='utf-8') as f:
-              body = f.read()
+          body = 'GPT GitHub Actions QQ SMTP connectivity test.'
 
           bj = timezone(timedelta(hours=8))
           now = datetime.now(bj)
