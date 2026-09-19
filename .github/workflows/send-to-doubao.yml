@@ -15,23 +15,23 @@ jobs:
 
       - name: Validate mail secrets
         env:
-          QQ_EMAIL: ${{ secrets.QQ_EMAIL }}
-          QQ_SMTP_PASS: ${{ secrets.QQ_SMTP_PASS }}
+          QQ_EMAIL: ${{ secrets.QQEEML }}
+          QQ_SMTP_PASS: ${{ secrets.QQAUTH_CODE }}
         run: |
           if [ -z "$QQ_EMAIL" ]; then
-            echo "ERROR: QQ_EMAIL secret is missing or unavailable to this workflow."
+            echo "ERROR: QQEEML secret is missing or unavailable to this workflow."
             exit 1
           fi
           if [ -z "$QQ_SMTP_PASS" ]; then
-            echo "ERROR: QQ_SMTP_PASS secret is missing or unavailable to this workflow."
+            echo "ERROR: QQAUTH_CODE secret is missing or unavailable to this workflow."
             exit 1
           fi
           echo "QQ mail secrets are available."
 
       - name: Send sync.txt to Doubao
         env:
-          QQ_EMAIL: ${{ secrets.QQ_EMAIL }}
-          QQ_SMTP_PASS: ${{ secrets.QQ_SMTP_PASS }}
+          QQ_EMAIL: ${{ secrets.QQEEML }}
+          QQ_SMTP_PASS: ${{ secrets.QQAUTH_CODE }}
           TO_EMAIL: iuph1375@agent.qq.com
         run: |
           python - <<'PY'
