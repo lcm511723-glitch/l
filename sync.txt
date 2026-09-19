@@ -1,0 +1,1 @@
+GPT Work 写入测试：如果你看到这行，说明 ChatGPT 已成功写入 GitHub 思想同步文件。
